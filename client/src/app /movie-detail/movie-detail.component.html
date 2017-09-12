@@ -1,0 +1,25 @@
+
+
+
+<app-navbar></app-navbar>
+
+<Div> <video autoplay loop id="video-background" muted>
+  <source src="https://www.callouts.com/video/videodemo/1479-98368-sample.mp4" type="video/mp4">
+  </video></Div>
+  <font color="white" ><h3>
+   <div class="container" style="margin-top: 50px">
+
+     <div class="row" responsive-sm-wrap *ngIf="ref">
+       <div class="container col-md-4 col-md-4 col-md-4" *ngFor=" let movie of ref">  	   
+        {{movie.title}}<br>
+        <img src="https://image.tmdb.org/t/p/w300/{{movie.poster_path}}"><br>
+        {{movie.release_date}}  
+        votes: {{movie.vote_count}}
+        <button  (click)="movieDelete(movie)">Delete List</button>
+
+        <button  (click)="onLikeEvent(movie)">Like</button>
+        
+      </div>
+      s</div>
+    </div></h3>
+  </font>

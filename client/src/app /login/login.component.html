@@ -1,0 +1,36 @@
+     <app-navbar></app-navbar>
+       
+
+
+
+
+
+<div class="container-fluid">
+  <div class="card card-container">
+    
+    
+    <br />
+    <b style="color:#c7c7c7 !important">MovieApp</b>
+    <p id="profile-name" class="profile-name-card"></p>
+    <form class="form-signin">
+      <span id="reauth-email" class="reauth-email"></span>
+      <input type="email" id="inputEmail" class="form-control" [(ngModel)]="data.email"  placeholder="Email address" required autofocus>
+      <input type="password" id="inputPassword" [(ngModel)]="data.password"   class="form-control" placeholder="Password" required>
+      <div id="remember" class="checkbox">
+        <label>
+          <input type="checkbox" value="remember-me"> Remember me
+        </label>
+      </div>
+      <button class="btn btn-lg btn-primary btn-block btn-signin"  (click)="login(data)" type="submit">Sign in</button>
+      <a  routerLink='register' class="forgot-password" style="float: left">
+        Don't have an account?
+        </a>
+      <button class="btn btn-lg btn-primary btn-block btn-signin"   routerLink='/register'  (click)="login(data)" type="submit">Sign Up</button>
+    </form>
+    
+    
+  </div>
+  </div>
+
+
+
